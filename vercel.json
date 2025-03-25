@@ -38,5 +38,16 @@
         }
       ]
     }
-  ]
+  ],
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "build": {
+    "env": {
+      "BUILD_COMMAND": "apt-get update && apt-get install -y python3-distutils && pnpm install && pnpm build"
+    }
+  }
 }
